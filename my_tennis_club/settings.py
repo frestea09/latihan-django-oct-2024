@@ -25,8 +25,12 @@ SECRET_KEY = 'django-insecure-bn51651)to*x6xz*rg-(^(x!xtbmg-s_l)w#wrqp=ba9y!qfa)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "ui/static")]
 
+# STATIC_URL = "/static/"
+
+STATIC_ROOT = os.path.join(BASE_DIR, "ui/staticfiles")
 
 # Application definition
 REST_FRAMEWORK = {
@@ -44,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'belajardua',
     'belajartiga',
-    'belajarempat'
+    'belajarempat',
 ]
 
 MIDDLEWARE = [ 
